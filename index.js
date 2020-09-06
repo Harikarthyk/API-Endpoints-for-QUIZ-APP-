@@ -14,9 +14,15 @@ const questionRoute = require('./routes/question');
 
 //use - Middleware
 //Body Parser
-app.use(bodyParser.json());
-//Cors
-app.use(cors());
+//Middle Ware
+app.use(express.json());
+
+//Cors Allow Access from Outside
+app.use((req, res, next) => {
+	res.setHeader('Access-Control-Allow-Origin', '*');
+	res.setHeader('Access-Control-Allow-Headers', '*');
+	next();
+});
 
 //DB Connection
 mongoose
