@@ -30,7 +30,7 @@ mongoose
 	.catch((error) => console.log(error));
 
 app.get('/', (req, res) => {
-	res.redirect('/api');
+	res.send('Hello Wolrd');
 });
 
 //Custom Routes
