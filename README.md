@@ -14,7 +14,7 @@
         "error": "Error in fetching Question"
      }
      
-## Request for API CALL  
+## REQUEST ALL CATEGORY 
 
   ###### Request:
     
@@ -43,4 +43,35 @@
         {
           error: 'Unable to fetch All Categories ...',
         }
+
+
+## REQUEST ADD CATEGORY 
+
+  ###### Request:
+    
+        https://api-quiz-endpoints.herokuapp.com/api/addCategory
+        POST REQUEST
+        Accept: application/json
+        Content-Type: application/json
+        {
+          "name": "Type Script",
+          "bgColor": "#89A9C8",
+          "logo": "img URL"
+        }
+   
+  ###### Successful Response: 
+        HTTP/1.1 200 OK
+        Content-Type: application/json
+        {
+            "message": "Type Script Added to Category"
+        }
+           
+  ###### Failed Response:
+        HTTP/1.1 400
+        Content-Type: application/json
+        {
+          error: 'error: 'Error in adding Category',
+        }
+       
+
        
