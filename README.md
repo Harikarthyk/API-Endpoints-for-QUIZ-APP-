@@ -114,4 +114,37 @@
        
 
 
+## REQUEST ADD QUESTION BY CATEGORY 
+
+  ###### Request:
+    
+        https://api-quiz-endpoints.herokuapp.com/api/add/${category._id}
+        POST REQUEST
+        ans => 1 <= 4
+        PARAMS : category._id 
+        {
+            "category" : category._id ,
+            "question":"What is Node.JS?",
+            "code" : "If any code exists",
+            "options" : ["option 01 ","option 02", "option 03","option 04"] ,
+            "ans" : 1 , 
+            "explaination" :"Explaination for the result "
+        }
+   
+  ###### Successful Response: 
+        HTTP/1.1 200 OK
+        Content-Type: application/json
+        {
+            "message": "Question Added Successfully"
+        }
+
+           
+  ###### Failed Response:
+        HTTP/1.1 400
+        Content-Type: application/json
+        {
+            "error": "Error in finding the Category"
+        }
+       
+
        
