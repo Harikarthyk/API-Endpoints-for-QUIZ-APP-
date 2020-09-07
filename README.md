@@ -121,6 +121,7 @@
         https://api-quiz-endpoints.herokuapp.com/api/add/${category._id}
         POST REQUEST
         PARAMS : category._id 
+        body : 
         {
             "category" : category._id ,
             "question":"What is Node.JS?",
