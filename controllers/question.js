@@ -18,13 +18,28 @@ exports.getCategoryById = (req, res, next, id) => {
 //type : GET
 exports.getQuestionByCategory = (req, res) => {
 	Question.find({ category: req.category._id }, (error, result) => {
-		if (error) {
+		if (result == null || error) {
 			return res.status(400).json({
 				error: 'Error in fetching Question',
 			});
 		}
 		return res.status(200).json({
 			questions: result,
+		});
+	});
+};
+
+//desc : add question by category
+//type : POST
+exports.addQuestionByCategory = (req, res) => {
+	new Question(req.body).save((error, result) => {
+		if (error) {
+			return res.status(400).json({
+				error: 'Error in adding Questions',
+			});
+		}
+		return res.status(200).json({
+			message: 'Question Added Successfully',
 		});
 	});
 };
