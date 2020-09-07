@@ -16,12 +16,12 @@
      
 ## Request for API CALL  
 
-    ###### Request:
+  ###### Request:
     
         https://api-quiz-endpoints.herokuapp.com/api/allCategory
         GET REQUEST
    
-    ###### Successful Response: 
+  ###### Successful Response: 
         HTTP/1.1 200 OK
         Content-Type: application/json
         {
@@ -37,7 +37,7 @@
           ]
         }
            
-    ###### Failed Response:
+  ###### Failed Response:
         HTTP/1.1 400
         Content-Type: application/json
         {
