@@ -53,6 +53,7 @@
         POST REQUEST
         Accept: application/json
         Content-Type: application/json
+        body : 
         {
           "name": "Type Script",
           "bgColor": "#89A9C8",
@@ -120,6 +121,8 @@
     
         https://api-quiz-endpoints.herokuapp.com/api/add/${category._id}
         POST REQUEST
+        Accept: application/json
+        Content-Type: application/json
         PARAMS : category._id 
         body : 
         {
