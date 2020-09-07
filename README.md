@@ -73,5 +73,45 @@
           error: 'error: 'Error in adding Category',
         }
        
+## REQUEST GET QUESTION BY CATEGORY 
+
+  ###### Request:
+    
+        https://api-quiz-endpoints.herokuapp.com/api/get/${category._id}
+        GET REQUEST
+        PARAMS : category._id 
+   
+  ###### Successful Response: 
+        HTTP/1.1 200 OK
+        Content-Type: application/json
+        {
+            "questions": [{
+                "options": [
+                    "Memory address of allocated memory of object",
+                    "NULL",
+                    "Garbage",
+                    "Any arbitrary pointer"
+                ],
+                "_id": "5f551776c21a520017447792",
+                "category": "5f4a5699751a87977cda2fc4",
+                "question": "What is the stored in the object obj in following lines of Java code?",
+                "code": "box obj;",
+                "ans": 2,
+                "explaination": "Explanation: Memory is allocated to an object using new operator. box obj; just declares a reference to object, no memory is allocated to it hence it points to NULL.",
+                "createdAt": "2020-09-06T17:08:07.000Z",
+                "updatedAt": "2020-09-06T17:08:07.000Z",
+                "__v": 0
+            }]
+        }
+
+           
+  ###### Failed Response:
+        HTTP/1.1 400
+        Content-Type: application/json
+        {
+            "error": "Error in finding the Category"
+        }
+       
+
 
        
