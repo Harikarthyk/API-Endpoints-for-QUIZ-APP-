@@ -29,3 +29,17 @@ exports.addCategory = (req, res) => {
 		});
 	});
 };
+
+exports.getCategoryById = (req, res) => {
+	// console.log(req.params);
+	Category.find({ _id: req.params.categoryId }, (error, result) => {
+		if (error) {
+			return res.status(400).json({
+				error: 'Error in finding the Cateogry',
+			});
+		}
+		return res.status(200).json({
+			category: result,
+		});
+	});
+};
